@@ -3,24 +3,22 @@ main{
     .carousel{
         padding: 20px 0 50px 0;
         position: relative;
-        width: 200vw;
         &>.active_2{
             transform: translateX(-60%);
         }
         &>div{
-            // display: flex;
-            // flex-direction: row;
-            // justify-content: space-between;
-            // transition: ease-in-out .5s;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
             .product-carousel{
-                width: calc(50% - 10%);
                 box-sizing: border-box;
-                margin: 0 2.5%;
                 display: flex;
                 flex-direction: column;
                 background-color: $bg-carousel;
+                width: 100%;
                 img{
-                    width: 100%;
+                    width: 90%;
+                    padding: 0 5%;
                 }
                 .content-prod{
                     padding:5%;
@@ -42,136 +40,45 @@ main{
                 }
             }
         }
-        .change-prod{
+        .slick-prev{
             display: none;
-            i{
-                top: 50%;
-                font-size: 2rem;
-                position: absolute;
-                transform: translateY(-50%);
-            }
-            .fa-chevron-right{
-                left: 40%;
-                transform: translateX(-100%);
-            }
-            .fa-chevron-left{
-                left: 0%;
+            position: absolute;
+            top: 50%;
+            left: 5px;
+            z-index: 2;
+            transform: translateY(-50%);
+            font-size: 1.5rem;
+            cursor: pointer;
+            &:hover{
+                color: #00000088;
             }
         }
-        .navigation-prod{
-            ul{
-                display: flex;
-                flex-direction: row;
-                align-items: center;
-                justify-content: center;
-                width: 50%;
-                li{
-                    width: 20px;
-                    height: 4px;
-                    background-color:gray;
-                    margin: 3px;
-                    transform: translateX(-50%);
-                    cursor: pointer;
-                }
-                .active{
-                    background-color: $green;
-                }
+        .slick-next{
+            display: none;
+            position: absolute;
+            top: 50%;
+            right: 5px;
+            transform: translateY(-50%);
+            z-index: 2;
+            font-size: 1.5rem;
+            cursor: pointer;
+            &:hover{
+                color: #00000088;
             }
         }
     }
 }
-
-@media only screen and (max-width: 991.98px) and (min-width:767.98px){
+@media only screen and (min-width: 991.98px){
     main{
         .carousel{
-            &>div{
+            .owl-carousel{
                 .product-carousel{
-                    width: 35%;
-                    margin: 0;
+                    display: grid !important;
+                    grid-template-columns: auto auto;
+                    align-items: center;
                 }
-            }
-            .navigation-prod{
-                ul{
-                    margin-top: 20px;
-                    width: 35%;
-                    li{
-                        margin: 5px;
-                        transform: translateX(50%);
-                    }
-                }
-            }
-        }
-    }
-    
-}
-
-@media only screen and (max-width:767.98px) and (min-width:575.98px){
-    main{
-        .carousel{
-            &>div{
-                .product-carousel{
-                    width: 40%;
-                    margin: 0;
-                }
-            }
-            .navigation-prod{
-                ul{
-                    width: 40%;
-                    li{
-                        margin: 5px;
-                        transform: translateX(50%);
-                    }
-                }
-            }
-        }
-    }
-}
-
-@media only screen and (min-width:991.98px){
-    main{
-        .carousel{
-            &>div{
-                .product-carousel{
-                    flex-direction: row;
-                    img{
-                        width: 50%;
-                    }
-                }
-            }
-            .navigation-prod{
-                ul{
-                    width: 45%;
-                    li{
-                        margin: 5px;
-                        transform: translateX(25%);
-                    }
-                }
-            }
-            .change-prod{
-                display: none;
-                i{
-                    cursor: pointer;
-                }
-            }
-        }
-    }
-    @media only screen and (min-width:1199.98px){
-        main{
-            .carousel{
-                &>div{
-                    .product-carousel{
-                        width: 35%;
-                        margin: 0 2.5%;
-                    }
-                }
-                .navigation-prod{
-                    ul{
-                        width: 40%;
-                        li{
-                            margin: 5px;
-                            transform: translateX(50%);
-                        }
-                    }
+                .slick-prev, .slick-next{
+                    display: block;
                 }
             }
         }
