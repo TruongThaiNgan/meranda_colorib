@@ -1,0 +1,43 @@
+main{
+    .blog-special{
+        margin: 50px 0;
+        display: flex;
+        flex-direction: column;
+        background-color: $bg-carousel;
+        img{
+            width: 100%;
+        }
+        .content-prod{
+            .caption{
+                text-transform: uppercase;
+            }
+            padding:5%;
+            .name-prod{
+                font-weight: 800;
+            }
+            .footer-prod{
+                font-size: 0.9rem;
+            }
+            .time-prod{
+                font-size: 0.9rem;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                i{
+                    font-size: 0.6rem;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width:991.98px){
+    main{
+        .blog-special{
+            flex-direction: row;
+            img{
+                width: 50%;
+            }
+        }
+    }
+}

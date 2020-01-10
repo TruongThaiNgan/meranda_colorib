@@ -1,0 +1,168 @@
+header{
+    padding:50px 0;
+    .row1-header{
+        display: flex;
+        flex-direction: column;
+        justify-content: left;
+        .brand{
+            font-size: 2rem;
+            width: 120px;
+        }
+        .search-div{
+            .icons{
+                display: none;
+                a{
+                    i{
+                        &:hover{
+                            color: #AAA;
+                        }
+                    }
+                }
+            }
+            .search{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                margin: 10px 0;
+                input{
+                    padding: 10px;
+                    width: 85%;
+                    border-radius: 60px;
+                    border: 1px solid black;
+                }
+                .icon-search{
+                    background-color: black;
+                    padding: 10px 15px;
+                    color: white;
+                    border-radius: 45%;
+                    &:hover{
+                        background-color:#000000CC;
+                    }
+                }
+            }
+        }
+        .icons-menu{
+            position: absolute;
+            right: 5%;
+            top: 65px;
+            transform: translateX(-50%);
+            i{
+                font-size: 1.5rem;
+            }
+        }
+        .menu-mini{
+            transform: translateX(100%);
+            transition: ease-in-out .3s;
+            z-index: 1;
+            width: 300px;
+            height: 100%;
+            position: fixed;
+            top: 0;
+            right: 0;
+            background-color: white;
+            font-size: 1.5rem;
+            box-shadow: -10px 0 20px -10px rgba(0, 0, 0, 0.1);
+            ul{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                padding-left: 20%;
+                height: 100%;
+            }
+            .icon-exit{
+                font-size: 2rem;
+                position: absolute;
+                top: 20px;
+                right: 20px;
+            }
+        }
+        .active{
+            transform: translateX(0);
+        }
+    }
+    nav{
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 991.98px){
+    header{
+        .row1-header{
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 50px;
+            .icons-menu{
+                display: none;
+            }
+            .search-div{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                .icons{
+                    display: flex;
+                    flex-direction: row;
+                    i{
+                        margin: 0 10px;
+                        font-size: 1.2rem;
+                    }
+                }
+                .search{
+                    input{
+                        margin: 0 20px;
+                    }
+                }
+            }
+        }
+        nav{
+            display: block;
+            width: 100%;
+            border-bottom: solid gray 1px;
+            ul{
+                display: flex;
+                flex-direction: row;
+                .active-nav{
+                    color: black;
+                }
+                a{
+                    color: gray;
+                    text-transform: uppercase;
+                    margin: 0 20px;
+                    &:nth-child(1){
+                        margin-left: 0;
+                    }
+                }
+            }
+        }
+    }
+    @media only screen and (min-width: 1199.98px) {
+        .container{
+            padding-left: 10% !important;
+            padding-right: 10% !important;
+        }
+    }
+}
+
+@media only screen and (max-width: 991.98px) and (min-width: 767.98px){
+    .container{
+        padding-right: 15% !important;
+        padding-left: 15% !important;
+        .row1-header{
+            .icons-menu{
+                right: 15%;
+            }
+        }
+    }
+}
+@media only screen and (max-width: 767.98px) and (min-width: 575.98px){
+    .container{
+        padding-right: 10% !important;
+        padding-left: 10% !important;
+        .row1-header{
+            .icons-menu{
+                right: 10%;
+            }
+        }
+    }
+}

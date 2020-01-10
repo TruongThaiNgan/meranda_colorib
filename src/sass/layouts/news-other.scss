@@ -1,0 +1,87 @@
+main{
+    .news-other{
+        .col1-NO{
+            padding: 20px 0;
+            &>div{
+                .prod-politics{
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    height: 200px;
+                    margin: 25px 0;
+                    img{
+                        width:30%;
+                        height: 100%;
+                    }
+                    .content-prod{
+                        height: 100%;
+                        h2{
+                            font-size: 1.2rem;
+                            margin: 0;
+                        }
+                        p{
+                            margin: 0;
+                            height: 74px;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                        }
+                        padding-left: 20px;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-evenly;
+                    }
+                }
+            }
+        }
+        .col2-NO{
+            padding: 20px 0;
+            &>div{
+                .prod-Business{
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    height: 200px;
+                    margin: 25px 0;
+                    img{
+                        width:30%;
+                        height: 100%;
+                    }
+                    .content-prod{
+                        height: 100%;
+                        h2{
+                            font-size: 1.2rem;
+                            margin: 0;
+                        }
+                        p{
+                            margin: 0;
+                            height: 74px;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                        }
+                        padding-left: 20px;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-evenly;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 991.98px){
+    main{
+        .news-other{
+            display: grid;
+            grid-template-columns: auto auto;
+            grid-column-gap: 100px;
+            font-size: 0.9rem;
+            p{
+                height: 52px !important;
+            }
+            .name-prod{
+                font-size: 1.1rem !important;
+            }
+        }
+    }
+}

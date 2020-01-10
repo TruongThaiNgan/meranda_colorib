@@ -1,0 +1,20 @@
+.main-cate{
+    &>h3{
+        margin: 0;
+        letter-spacing: 5px;
+        color: gray;
+    }
+    .news-other2{
+        padding-top: 0;
+        .reccent-news{
+            .name-news{
+                margin-top: 0;
+            }
+        }
+        .popular-posts{
+            .name-news{
+                margin-top: 0;
+            }
+        }
+    }
+}

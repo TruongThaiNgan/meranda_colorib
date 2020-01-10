@@ -1,0 +1,56 @@
+.main-contact{
+    box-sizing: border-box;
+    font-size: 1rem;
+    background-color: $bg-carousel;
+    width: 100%;
+    padding: 50px;
+    margin: 50px 0;
+    label{
+        display: block;
+        margin-bottom: 15px;
+    }
+    input{
+        width: 100%;
+        box-sizing: border-box;
+        border-radius: 50px;
+        height: 50px;
+        padding-left: 20px;
+        margin-bottom: 20px;
+        border: 1px solid gray;
+    }
+    textarea{
+        width: 100%;
+        border-radius: 50px;
+        padding: 20px ;
+        box-sizing: border-box;
+    }
+    .btn-black{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: black;
+        color: white;
+        width: 200px;
+        height: 50px;
+        margin-top: 20px;
+        border-radius: 50px;
+    }
+    .mini-contact{
+        .input{
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-column-gap: 20px;
+        }
+    }
+}
+
+@media only screen and (max-width: 767.98px){
+    .main-contact{
+        .mini-contact{
+            .input{
+                grid-template-columns: auto;
+                grid-column-gap: 0;
+            }
+        }
+    }
+}

@@ -1,0 +1,141 @@
+main{
+    .editor-pick{
+        .zoomIn-editor{
+            padding-bottom: 25px ;
+            .prod-ZIE{
+                img{
+                    width: 100%;
+                    height: 250px;
+                }
+            }
+            .number2,.number3{
+                display: none;
+            }
+        }
+        .ZoomOut-editor{
+            .active{
+                background-color: $bg-carousel;
+            }
+            .prod-ZOE{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                height: 150px;
+                margin: 20px 0;
+                img{
+                    width:40%;
+                    height: 100%;
+                }
+                .content-PZOE{
+                    height: 100%;
+                    h2{
+                        font-size: 1.2rem;
+                        margin: 0;
+                    }
+                    padding-left: 20px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-evenly;
+                }
+            }
+        }
+    }
+    .trending{
+        padding: 30px 0;
+        .trend-entry{
+            display: flex;
+            flex-direction: row;
+            height:70px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            .number-top{
+                font-size: 2rem;
+                font-weight: 100;
+                padding-top: 5px;
+                height: 100%;
+                text-align: center;
+                justify-items: center;
+                box-sizing: border-box;
+            }
+            .content-TE{
+                h2{
+                    font-size: 1.2rem;
+                    margin: 0;
+                }
+                margin-left: 10px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+            }
+        }
+    }
+    .zoomOut-alltrend{
+        color: #8bc34a;
+        text-transform: uppercase;
+        font-size: 0.8rem;
+    }
+}
+
+@media only screen and (min-width: 767.98px){
+    main{
+        .editor-pick{
+            &>div{
+                display: grid;
+                grid-template-columns: auto auto;
+                grid-column-gap: 30px; 
+                .zoomIn-editor{
+                    .prod-ZIE{
+                        &>img{
+                            height: 200px;
+                        }
+                        .content-top-editor{
+                            .name-cte{
+                                margin: 10px 0;
+                            }
+                        }
+                    }
+                }   
+                .ZoomOut-editor{
+                    .prod-ZOE{
+                        height: 100px;
+                        &:nth-child(1){
+                            margin-top: 0;
+                        }
+                        .content-PZOE{
+                            h2{
+                                font-size: 1rem;
+                                font-weight: 600;
+                            }
+                            &>div{
+                                font-size: 0.8rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .trending{
+            .trend-entry{
+                color: #aaa;
+                .number-top{
+                    font-weight: 100;
+                }
+                .content-TE{
+                    font-size: 0.8rem;
+                }
+            }
+        }
+    }
+    @media only screen and (min-width: 991.98px){
+        main{
+            .news{
+                display: grid;
+                grid-template-columns: 60% 30%;
+                grid-column-gap: 10%;
+                .trending{
+                    padding-top: 0;
+                }
+            }
+        }
+    }
+}

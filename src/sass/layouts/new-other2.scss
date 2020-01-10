@@ -1,0 +1,123 @@
+main{
+    .news-other2{
+        padding: 20px 0;
+        .reccent-news{
+            padding: 20px 0;
+            &>div{
+                .prod-reccent-news{
+                    display: flex;
+                    flex-direction: row-reverse;
+                    align-items: center;
+                    height: 200px;
+                    margin: 25px 0;
+                    img{
+                        width:30%;
+                        height: 100%;
+                    }
+                    .content-prod{
+                        height: 100%;
+                        h2{
+                            font-size: 1.2rem;
+                            margin: 0;
+                        }
+                        p{
+                            margin: 0;
+                            height: 74px;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                        }
+                        padding-right: 20px;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-evenly;
+                    }
+                }
+            }
+        }
+        .popular-posts{
+            padding: 20px 0;
+            &>div{
+                .posts-entry{
+                    display: flex;
+                    flex-direction: row;
+                    height:70px;
+                    margin-top: 20px;
+                    margin-bottom: 20px;
+                    .number-top{
+                        font-size: 2rem;
+                        font-weight: 100;
+                        padding-top: 5px;
+                        height: 100%;
+                        text-align: center;
+                        justify-items: center;
+                        box-sizing: border-box;
+                    }
+                    .content-TE{
+                        h2{
+                            font-size: 1.2rem;
+                            margin: 0;
+                        }
+                        margin-left: 10px;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-evenly;
+                    }
+                }
+            }
+        }
+        .change-page{
+            ul{
+                display: flex;
+                flex-direction: row;
+                *{
+                    color: gray;
+                }
+                li{
+                    margin: 10px;
+                    .active{
+                        color: black !important;
+                        font-weight: 800;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 991.98px){
+    main{
+        .news-other2{
+            display: grid;
+            grid-template-columns: 60% auto;
+            grid-column-gap: 80px;
+            .reccent-news{
+                &>div{
+                    .prod-reccent-news{
+                        font-size: .9rem;
+                        .content-prod{
+                            .name-prod{
+                                font-size: 1.1rem;
+                            }
+                            p{
+                                height: 52px;
+                            }
+                        }
+                    }
+                }
+            }
+            .popular-posts{
+                &>div{
+                    .posts-entry{
+                        margin: 25px 0;
+                        .content-TE{
+                            font-size: 0.9rem;
+                            .name-CTE{
+                                font-size: 1.1rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

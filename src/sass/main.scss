@@ -1,0 +1,27 @@
+//helpers
+@import './helpers/mixin';
+@import './helpers/variabes';
+//base
+@import './base/customize';
+@import './base/normalized';
+@import './base/reset';
+//vendors
+
+//layouts
+@import './layouts/header.scss';
+@import './layouts/carousel.scss';
+@import './layouts/news.scss';
+@import './layouts/blog-special.scss';
+@import './layouts/news-other.scss';
+@import './layouts/new-other2.scss';
+@import './layouts/newsletter-subcribe.scss';
+@import './layouts/categories.scss';
+@import './layouts/blog-single.scss';
+@import './layouts/contact.scss';
+
+//component
+@import './component/button';
+@import './component/class';
+//pages
+    
+//theme
