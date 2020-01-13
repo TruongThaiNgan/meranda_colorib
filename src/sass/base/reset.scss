@@ -8,3 +8,9 @@ ul{
     list-style: none;
     padding: 0;
 }
+
+textarea, input{
+    &:focus{
+        outline: none;
+    }
+}
