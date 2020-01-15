@@ -64,3 +64,14 @@ setInterval(function(){
         changeZoomIn();
     }
 }, 3000);
+
+
+const nav = document.querySelector('nav');
+const navigation = document.querySelector('nav>ul');
+window.addEventListener('scroll',function(){
+    if(window.pageYOffset > nav.offsetTop){
+        navigation.classList.add('sticky');
+    }
+    else
+        navigation.classList.remove('sticky');
+});

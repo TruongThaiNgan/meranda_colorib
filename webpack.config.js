@@ -3,6 +3,7 @@ const htmlWebpackPlugin = require("html-webpack-plugin");
 const TerserPlugin = require("terser-webpack-plugin");
 const OptimizeCssAssets = require("optimize-css-assets-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const nodeExternals = require('webpack-node-externals');
 // const CleanWebpackPlugin = require("clean-webpack-plugin");
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 module.exports = {
@@ -10,7 +11,10 @@ module.exports = {
 //tao comment cho file output
    devtool: "none",                                                     
 //tat viet cung 1 hang
-    entry: "./src/app.js",
+    entry: {
+        app :"./src/app.js",
+        server : "./src/js/index.js"
+    },
     output:{
         filename: "[name].bundle.js",
         path: path.resolve(__dirname,"dist") 
@@ -43,7 +47,6 @@ module.exports = {
             {
                 test: /\.js$/,
                 use: "babel-loader",
-                
             }
         ]
     },
@@ -91,5 +94,13 @@ module.exports = {
             // }
         }),
         new CleanWebpackPlugin()
-    ]
+    ],
+    target: 'node',
+    node: {
+        __dirname: false,
+        __filename: false,
+    },
+    externals: [nodeExternals(
+        { whitelist: [ "slick-carousel/slick/slick", "path", "jquery" ] }
+    )],
 }
