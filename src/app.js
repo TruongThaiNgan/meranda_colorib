@@ -75,3 +75,11 @@ window.addEventListener('scroll',function(){
     else
         navigation.classList.remove('sticky');
 });
+
+var url_change = document.querySelectorAll('a');
+
+url_change.forEach(element => {
+    let term = element.href;
+    let arr = term.split('.');
+    element.href = arr[0];
+});
